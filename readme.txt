@@ -1,0 +1,8 @@
+本项目是模拟mybatis 核心功能
+1. MapperFactoryBean
+2. MapperScannerRegistrar
+3. @MapperScan
+所以，到此为止，Spring整合Mybatis的核心原理就结束了，再次总结一下：
+1. 定义一个MyFactoryBean，用来将Mybatis的代理对象生成一个bean对象
+2. 定义一个MyImportBeanDefinitionRegistrar，用来生成不同Mapper对象的MyFactoryBean
+3. 定义一个@MynScan，用来在启动Spring时执行MyImportBeanDefinitionRegistrar的逻辑，并指定包路径
